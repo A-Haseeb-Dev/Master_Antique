@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antique Gallery - Premium UI</title>
+    <style>
+        body {
+            font-family: 'Merriweather', serif;
+            background-color: #f8f5f0;
+            margin: 0;
+            padding: 0;
+            color: #3a2d2d;
+        }
+
+        .gallery-section {
+            padding: 60px 5%;
+            text-align: center;
+        }
+
+        .gallery-section h2 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            color: #2c1f1f;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-family: Roboto, sans-serif;
+        }
+
+        .gallery-section p {
+            font-size: 1.15rem;
+            color: #5c4338;
+            margin-bottom: 45px;
+            line-height: 1.6;
+            font-family: Poppins, serif;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            border: none;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+            background: #fff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.02);
+            box-shadow: 5px 12px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            padding: 10px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 1rem;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .gallery-item:hover .gallery-caption {
+            opacity: 1;
+        }
+
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 85%;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+        }
+
+        .lightbox:target {
+            display: flex;
+        }
+
+        .close {
+            position: absolute;
+            top: 25px;
+            right: 35px;
+            font-size: 2.5rem;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="gallery-section">
+        <h2>Our Antique Collection</h2>
+        <p>Step into history with our handpicked treasures from different eras.</p>
+
+        <div class="gallery-grid">
+            <a href="#img1" class="gallery-item">
+                <img src="./e3a853b82cc80bc8677b8ecbad920dd7.jpg_720x720q80.jpg_.webp" alt="Antique 1">
+                <div class="gallery-caption">Vintage Clock</div>
+            </a>
+            <a href="#img2" class="gallery-item">
+                <img src="./images.jpeg" alt="Antique 2">
+                <div class="gallery-caption">Classic Lamp</div>
+            </a>
+            <a href="#img3" class="gallery-item">
+                <img src="./Vintage-Royal-Standard-England-Yellow-Porcelain-Tea-Set-IMG-2522.webp" alt="Antique 3">
+                <div class="gallery-caption">Royal Tea Set</div>
+            </a>
+            <a href="#img4" class="gallery-item">
+                <img src="./81jreGH-UbL._UF894,1000_QL80_.jpg" alt="Antique 4">
+                <div class="gallery-caption">Wooden Chest</div>
+            </a>
+        </div>
+    </section>
+
+    <div id="img1" class="lightbox">
+        <a href="#" class="close">&times;</a>
+        <img src="./e3a853b82cc80bc8677b8ecbad920dd7.jpg_720x720q80.jpg_.webp" alt="Antique 1">
+    </div>
+    <div id="img2" class="lightbox">
+        <a href="#" class="close">&times;</a>
+        <img src="./images.jpeg" alt="Antique 2">
+    </div>
+    <div id="img3" class="lightbox">
+        <a href="#" class="close">&times;</a>
+        <img src="./Vintage-Royal-Standard-England-Yellow-Porcelain-Tea-Set-IMG-2522.webp" alt="Antique 3">
+    </div>
+    <div id="img4" class="lightbox">
+        <a href="#" class="close">&times;</a>
+        <img src="./81jreGH-UbL._UF894,1000_QL80_.jpg" alt="Antique 4">
+    </div>
+
+</body>
+
+</html>
