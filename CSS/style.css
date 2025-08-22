@@ -362,8 +362,28 @@ body {
   background: rgba(0,0,0,0.8);
 }
 
+/*  */
+
+.about-section {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .about-section h1 {
+      text-align: center;
+      color: #0077b6;
+    }
+    .about-section p {
+      line-height: 1.6;
+      text-align: justify;
+    }
 
 
+
+/*  */
 
 footer {
   background: var(--primary-color);
