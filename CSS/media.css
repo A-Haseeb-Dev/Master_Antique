@@ -92,3 +92,14 @@
         transition: none
     }
 }
+
+
+/* about section Arsalan */
+
+ /* Responsive */
+    @media(max-width: 768px) {
+      .hero h1 { font-size: 2.2rem; }
+      .about-section { flex-direction: column; text-align: center; }
+      .about-text, .about-img { flex: unset; }
+      .craftsmanship h2 { font-size: 2rem; }
+    }
