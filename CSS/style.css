@@ -319,10 +319,45 @@ body {
   padding-left: 15px;
 }
 
+.slider {
+  position: relative;
+  width: 80%;
+  max-width: 700px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
 
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
 
+.slides img {
+  width: 100%;
+  border-radius: 10px;
+}
 
+/* Buttons */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 24px;
+  border-radius: 50%;
+}
 
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.prev:hover, .next:hover {
+  background: rgba(0,0,0,0.8);
+}
 
 
 
@@ -405,26 +440,6 @@ footer {
   font-size: 13px;
   color: #f8e8d0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 .contact-container {
