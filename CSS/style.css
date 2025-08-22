@@ -319,9 +319,6 @@ body {
   padding-left: 15px;
 }
 
-
-
-
 .slider {
   position: relative;
   width: 80%;
@@ -361,6 +358,7 @@ body {
 .prev:hover, .next:hover {
   background: rgba(0,0,0,0.8);
 }
+
 
 
 
@@ -441,4 +439,47 @@ footer {
   border-top: 1px solid #f8e8d0;
   font-size: 13px;
   color: #f8e8d0;
+}
+
+
+.contact-container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 50px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.contact-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    flex: 1 1 250px;
+    max-width: 300px;
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+}
+
+.icon {
+    font-size: 40px;
+    color: #007BFF;
+    margin-bottom: 15px;
+}
+
+h3 {
+    margin-bottom: 8px;
+    font-size: 20px;
+    color: #222;
+}
+
+p {
+    font-size: 15px;
+    color: #555;
 }
