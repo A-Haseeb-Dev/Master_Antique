@@ -11,13 +11,23 @@
 
     <link rel='stylesheet' type='text/css' media='screen' href='../CSS/style.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='../CSS/media.css'>
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
 </head>
 
 <body>
     <!-- Navbar Section -->
     <header>
-    <nav class="navbar">
-      <div class="logo">Master Antique</div>
+    <nav class="navbars">
+      <div class="logo"> <a href="../Index.html">Master Antique</a></div>
 
       <div class="hamburger" id="hamburger">
         <span></span>
@@ -36,31 +46,49 @@
 
 
 
-    <section class="contact-container">
-        <div class="contact-card">
-            <div class="icon"><i class="fas fa-phone-alt"></i></div>
-            <h3>Phone</h3>
-            <p>+92 300 1234567</p>
+     <!--Contact Form Section-->
+    <div class="container-fluid">
+        <div class="container">
+            <div class="col-12 heading">
+                    <h1>Contact Master Antique</h1>
+                    <p class="align-middle">At Master Antique, we believe every piece tells a story. Our collection brings together rare antiques, timeless artifacts, and exquisite vintage treasures that celebrate history, culture, and craftsmanship. Each item is carefully selected for its authenticity, uniqueness, and charm—making it more than just décor, but a piece of heritage to cherish.</p>
+            </div>
         </div>
-
-        <div class="contact-card">
-            <div class="icon"><i class="fas fa-envelope"></i></div>
-            <h3>Email</h3>
-            <p>info@example.com</p>
+    </div>
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row contact d-flex">
+                <div class="col-lg-6 col-sm-6 col-12 subdetails">
+                    <h2>Phone :</h2>
+                    <p>Mob: +44 (0)778 2339699</p>
+                    <h2>Address :</h2>
+                    <p>Please use this address for post or for contacting us:</p>
+                    <p>The Master Antique</p>
+                </div>
+                <div class="col-lg-6 col-sm-6 col-12">
+                    <form class="">
+                        <p>YOUR'S NAME :</p>
+                        <input type="text" name = "name" placeholder="Enter your Name" required="required" maxlength="30" size="50">
+                        <br>
+                        <br>
+                        <p>EMAIL ADDRESS :</p>
+                        <input  type ="email" placeholder="Enter email address" required="required" maxlength="30" size="50">
+                        <br>
+                        <br>
+                        <p>PHONE NUMBER :</p>
+                        <input type="text" name="contanctno" placeholder="Enter phone number" required="required" maxlength="30" size="50">
+                        <br>
+                        <br>
+                        <p>YOUR MESSAGE :</p>
+                        <textarea type ="text" name="message" cols= "50" rows="5"  maxlength="350" placeholder="Enter your message here...."></textarea>
+                        <br>
+                        <br>
+                        <input class = "button"type="submit">
+                    </form>
+                </div>
+            </div>
         </div>
-
-        <div class="contact-card">
-            <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
-            <h3>Address</h3>
-            <p>123 Street, Lahore, Pakistan</p>
-        </div>
-
-        <div class="contact-card">
-            <div class="icon"><i class="fab fa-whatsapp"></i></div>
-            <h3>WhatsApp</h3>
-            <p>+92 300 7654321</p>
-        </div>
-    </section>
+    </div>        
 
 
 
