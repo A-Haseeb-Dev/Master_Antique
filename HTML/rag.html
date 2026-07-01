@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Contact — Master Antique</title>
+  <title>Antique AI — Master Antique</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Contact Master Antique to arrange a private viewing, request provenance information, or inquire about a specific piece.">
+  <meta name="description" content="Ask Master Antique's AI about our collection, antique eras, care tips, authentication, and restoration.">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" type="text/css" media="screen" href="../CSS/style.css">
   <link rel="stylesheet" type="text/css" media="screen" href="../CSS/media.css">
@@ -27,7 +27,7 @@
           <li><a href="../Index.html">Home</a></li>
           <li><a href="./about.html">About</a></li>
           <li><a href="./product.html">Collection</a></li>
-          <li><a href="./rag.html">Antique AI</a></li>
+          <li><a href="./rag.html" class="active">Antique AI</a></li>
           <li><a href="./contact.html">Contact</a></li>
         </ul>
       </div>
@@ -37,84 +37,30 @@
   <main>
     <section class="page-header">
       <div class="container">
-        <span class="section-label reveal">Get in Touch</span>
-        <h1 class="section-title reveal reveal-delay-1">Arrange a<br>Private Viewing</h1>
+        <span class="section-label reveal">Antique AI</span>
+        <h1 class="section-title reveal reveal-delay-1">Ask the<br>Curator</h1>
         <div class="gold-divider reveal reveal-delay-2" style="margin: var(--spacing-lg) auto;"></div>
-        <p class="section-subtitle reveal reveal-delay-3">We welcome collectors and enthusiasts by appointment. Our curators will be delighted to assist you.</p>
+        <p class="section-subtitle reveal reveal-delay-3">Powered by our knowledge base of 130+ years of antique expertise. Ask about periods, pieces, care, authentication, or restoration.</p>
       </div>
     </section>
 
-    <section class="contact-section">
+    <section class="section rag-section">
       <div class="container">
-        <div class="contact-grid">
-          <div class="reveal">
-            <div class="contact-form-wrap">
-              <form id="contact-form">
-                <div class="form-group">
-                  <label for="contact-name">Full Name</label>
-                  <input type="text" id="contact-name" placeholder="Your full name" required>
-                </div>
-                <div class="form-group">
-                  <label for="contact-email">Email Address</label>
-                  <input type="email" id="contact-email" placeholder="your@email.com" required>
-                </div>
-                <div class="form-group">
-                  <label for="contact-phone">Phone (optional)</label>
-                  <input type="tel" id="contact-phone" placeholder="+92 300 123 4567">
-                </div>
-                <div class="form-group">
-                  <label for="contact-reference">Piece Reference (optional)</label>
-                  <input type="text" id="contact-reference" placeholder="e.g. Victorian porcelain vase">
-                </div>
-                <div class="form-group">
-                  <label for="contact-message">Message</label>
-                  <textarea id="contact-message" placeholder="Please describe the piece you are interested in or the type of collection you are building..." required></textarea>
-                </div>
-                <button type="submit" class="submit-btn">Send Inquiry</button>
-              </form>
-            </div>
+        <div class="rag-layout">
+          <div class="rag-suggestions reveal">
+            <button class="rag-suggestion">Show me Victorian pieces under $3000</button>
+            <button class="rag-suggestion">How do I care for antique silver?</button>
+            <button class="rag-suggestion">What is Georgian furniture known for?</button>
+            <button class="rag-suggestion">Tell me about Art Deco style</button>
+            <button class="rag-suggestion">How to authenticate a porcelain vase</button>
+            <button class="rag-suggestion">What is Mid-Century Modern design?</button>
           </div>
 
-          <div class="contact-info-list">
-            <div class="contact-info-card reveal">
-              <div class="contact-info-icon"><i class="fas fa-map-marker-alt"></i></div>
-              <div>
-                <h4>Our Showroom</h4>
-                <p>42 Heritage Lane, Saddar<br>Karachi 74200, Pakistan</p>
-              </div>
-            </div>
-
-            <div class="contact-info-card reveal reveal-delay-1">
-              <div class="contact-info-icon"><i class="fas fa-phone-alt"></i></div>
-              <div>
-                <h4>Telephone</h4>
-                <p>+92 300 123 4567<br>+92 21 3456 7890</p>
-              </div>
-            </div>
-
-            <div class="contact-info-card reveal reveal-delay-2">
-              <div class="contact-info-icon"><i class="fas fa-envelope"></i></div>
-              <div>
-                <h4>Email</h4>
-                <p>hello@masterantique.com<br>appraisals@masterantique.com</p>
-              </div>
-            </div>
-
-            <div class="contact-info-card reveal reveal-delay-3">
-              <div class="contact-info-icon"><i class="fas fa-clock"></i></div>
-              <div>
-                <h4>Opening Hours</h4>
-                <p>Monday–Saturday: 10:00 AM – 7:00 PM<br>Sunday: By appointment only</p>
-                <p style="margin-top: var(--spacing-sm); color: var(--text-muted); font-style: italic; font-size: 0.8rem;">Private viewings arranged upon request</p>
-              </div>
-            </div>
-
-            <div class="contact-info-card reveal reveal-delay-3">
-              <div class="contact-info-icon"><i class="fas fa-search"></i></div>
-              <div>
-                <h4>Appraisal Services</h4>
-                <p>Our period specialists offer confidential appraisal and authentication services. Please email or call to schedule.</p>
-              </div>
+          <div class="rag-chat-wrap reveal reveal-delay-1">
+            <div class="rag-chat" id="rag-chat" role="log" aria-live="polite" aria-label="Chat messages"></div>
+            <div class="rag-input-wrap">
+              <input type="text" id="rag-input" class="rag-input" placeholder="Ask about our collection, eras, care, authentication..." autocomplete="off">
+              <button id="rag-send" class="rag-send" aria-label="Send question"><i class="fas fa-arrow-up"></i></button>
             </div>
           </div>
         </div>
@@ -123,7 +69,7 @@
 
     <section class="scarcity-banner">
       <div class="container">
-        <p><span>Appointments recommended.</span> We dedicate our full attention to each visitor to ensure a meaningful experience.</p>
+        <p>Every answer is grounded in our <span>curated knowledge base</span> of authenticated antiques.</p>
       </div>
     </section>
   </main>
@@ -196,6 +142,12 @@
     </div>
   </div>
 
-  <script src="../JS/app.js"></script>
+  <script>
+  if (window.location.protocol === 'file:') {
+    document.body.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:100vh;font-family:serif;color:#2C1810;background:#F5F0E6;flex-direction:column;gap:16px;text-align:center;padding:24px;"><h1 style="font-weight:300;font-size:1.8rem;">⚠ Server Required</h1><p style="max-width:480px;line-height:1.8;">Open the RAG server first, then access via<br><strong style="color:#B8860B;">http://localhost:3000</strong></p><pre style="background:#EDE7DC;padding:16px;font-size:0.85rem;text-align:left;line-height:1.6;">cd Master_Antique\\server<br>$env:OPENROUTER_API_KEY = "sk-or-v1-..."<br>node index.js</pre></div>';
+  }
+</script>
+<script src="../JS/app.js?v=2"></script>
+  <script src="../JS/rag.js?v=2"></script>
 </body>
 </html>

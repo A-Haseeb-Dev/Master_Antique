@@ -1,118 +1,320 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Master Antique</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-        <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel='stylesheet' type='text/css' media='screen' href='./CSS/style.css'>
-    <link rel='stylesheet' type='text/css' media='screen' href='./CSS/media.css'>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Master Antique — Curators of Fine Antiques Since 1892</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Master Antique has been curating the world's finest antiques since 1892. Discover Victorian, Georgian, Art Deco and Mid-Century pieces, each authenticated and restored by master craftsmen.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="./CSS/style.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="./CSS/media.css">
 </head>
-
 <body>
-    <!-- Navbar Section -->
-    <header>
-    <nav class="navbar">
-      <div class="logo">Master Antique</div>
 
-      <div class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
+  <header>
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+      <div class="navbar-inner">
+        <a href="./Index.html" class="logo">Master&nbsp;<span>Antique</span></a>
+
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <ul class="nav-links" id="nav-links">
+          <li><a href="./Index.html">Home</a></li>
+          <li><a href="./HTML/about.html">About</a></li>
+          <li><a href="./HTML/product.html">Collection</a></li>
+          <li><a href="./HTML/rag.html">Antique AI</a></li>
+          <li><a href="./HTML/contact.html">Contact</a></li>
+        </ul>
       </div>
-
-      <ul class="nav-links" id="nav-links">
-        <li><a href="./Index.html">Home</a></li>
-        <li><a href="./HTML/about.html">About</a></li>
-        <li><a href="./HTML/product.html">Products</a></li>
-        <li><a href="./HTML/contact.html">Contact</a></li>
-      </ul>
     </nav>
   </header>
 
+  <main>
+    <div class="hero" id="hero" tabindex="0" role="region" aria-label="Featured antiques carousel">
+      <div class="hero-track" id="track">
+        <div class="hero-slide active">
+          <img src="https://images.pexels.com/photos/18424382/pexels-photo-18424382.jpeg?auto=compress&cs=tinysrgb&w=1500" alt="Curated antique collection on mahogany shelves" loading="eager">
+          <div class="hero-overlay"></div>
+          <div class="hero-content">
+            <span class="hero-badge">Est. 1892</span>
+            <h1>Where History<br>Finds a <em>Home</em></h1>
+            <p>Each piece in our collection is handpicked, authenticated, and restored — a tangible connection to the craftsmanship of generations past.</p>
+            <div class="hero-actions">
+              <a href="./HTML/product.html" class="btn-primary">Explore the Collection <i class="fas fa-arrow-right"></i></a>
+              <a href="./HTML/about.html" class="btn-secondary">Our Heritage</a>
+            </div>
+          </div>
+        </div>
 
+        <div class="hero-slide">
+          <img src="https://images.pexels.com/photos/18448275/pexels-photo-18448275.jpeg?auto=compress&cs=tinysrgb&w=1500" alt="Mid-century armchair in olive velvet" loading="lazy">
+          <div class="hero-overlay"></div>
+          <div class="hero-content">
+            <span class="hero-badge">One of a Kind</span>
+            <h1>Own a Piece<br>of <em>History</em></h1>
+            <p>From Victorian heirlooms to Art Deco masterpieces — every item tells a story that could be yours.</p>
+            <div class="hero-actions">
+              <a href="./HTML/product.html" class="btn-primary">View Recent Acquisitions <i class="fas fa-arrow-right"></i></a>
+              <a href="./HTML/contact.html" class="btn-secondary">Book a Viewing</a>
+            </div>
+          </div>
+        </div>
 
-
-  <!-- CAROUSEL (after navbar) -->
-  <div class="carousel" id="carousel" tabindex="0" role="region" aria-label="Featured antiques carousel">
-    <div class="carousel-track" id="track">
-      <div class="slide">
-        <img src="https://images.unsplash.com/photo-1749741335932-f5295ee9afd0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxMXx8fGVufDB8fHx8fA%3D%3D" alt="Victorian Vase - hand-painted porcelain" loading="lazy">
-        <div class="caption"><h3>Victorian Vase</h3><p>Hand-painted porcelain, 1890s</p></div>
+        <div class="hero-slide">
+          <img src="https://images.pexels.com/photos/5490303/pexels-photo-5490303.jpeg?auto=compress&cs=tinysrgb&w=1500" alt="Georgian mahogany armchair with carved details" loading="lazy">
+          <div class="hero-overlay"></div>
+          <div class="hero-content">
+            <span class="hero-badge">Master Craftsmanship</span>
+            <h1>Treasures<br>That <em>Endure</em></h1>
+            <p>Restored by master artisans using period-authentic techniques — preserving beauty for generations to come.</p>
+            <div class="hero-actions">
+              <a href="./HTML/product.html" class="btn-primary">Discover Masterpieces <i class="fas fa-arrow-right"></i></a>
+              <a href="./HTML/about.html" class="btn-secondary">Our Restoration Ethos</a>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="slide">
-        <img src="https://plus.unsplash.com/premium_photo-1754738812928-d7f23344b956?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxOXx8fGVufDB8fHx8fA%3D%3D" alt="Grandfather Clock - oak wood" loading="lazy">
-        <div class="caption"><h3>Grandfather Clock</h3><p>Oak wood, early 1900s</p></div>
+      <div class="hero-controls">
+        <button class="hero-btn prev" aria-label="Previous slide"><i class="fas fa-chevron-left"></i></button>
+        <button class="hero-btn next" aria-label="Next slide"><i class="fas fa-chevron-right"></i></button>
       </div>
 
-      <div class="slide">
-        <img src="https://images.unsplash.com/photo-1752500957720-7b412442106b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyMHx8fGVufDB8fHx8fA%3D%3D" alt="Carved Chair - Georgian era" loading="lazy">
-        <div class="caption"><h3>Georgian Chair</h3><p>Hand-carved mahogany, c. 1790</p></div>
-      </div>
+      <div class="hero-indicators"></div>
+      <div class="hero-progress"></div>
     </div>
 
-    <div class="controls" aria-hidden="false">
-      <button class="prev" aria-label="Previous slide">&#10094;</button>
-      <button class="next" aria-label="Next slide">&#10095;</button>
-    </div>
+    <section class="featured">
+      <div class="container">
+        <div class="featured-header">
+          <span class="section-label reveal">Curator's Selection</span>
+          <h2 class="section-title reveal reveal-delay-1">Exceptional Pieces,<br>Handpicked for You</h2>
+          <div class="gold-divider reveal reveal-delay-2" style="margin: var(--spacing-xl) auto;"></div>
+          <p class="section-subtitle reveal reveal-delay-2" style="margin: 0 auto; max-width: 600px;">Every item in our collection undergoes rigorous authentication by period specialists. These are not mere objects — they are heirlooms, investments, and works of art.</p>
+        </div>
 
-    <div class="indicators" id="indicators" aria-hidden="false"></div>
+        <div class="featured-grid">
+          <div class="featured-card reveal">
+            <img class="featured-card-image" src="https://images.pexels.com/photos/18424382/pexels-photo-18424382.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Victorian hand-painted porcelain vase with gold leaf" loading="lazy">
+            <div class="featured-card-body">
+              <span class="featured-card-number">01</span>
+              <span class="featured-card-era">Victorian Era, Circa 1880</span>
+              <h3 class="featured-card-title">Porcelain &amp; Gold<br>Leaf Vase</h3>
+              <p class="featured-card-text">Hand-painted porcelain with intricate 24k gold leaf detailing. Sourced from a private estate in Somerset, England.</p>
+              <span class="featured-card-cta">Inquire <i class="fas fa-arrow-right"></i></span>
+            </div>
+          </div>
+
+          <div class="featured-card reveal reveal-delay-1">
+            <img class="featured-card-image" src="https://images.pexels.com/photos/18160202/pexels-photo-18160202.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Art Deco figural table lamp with stained glass shade" loading="lazy">
+            <div class="featured-card-body">
+              <span class="featured-card-number">02</span>
+              <span class="featured-card-era">Art Deco, Circa 1925</span>
+              <h3 class="featured-card-title">Stained Glass<br>Table Lamp</h3>
+              <p class="featured-card-text">Original Art Deco figural lamp with handcrafted stained glass shade. Attributed to the Atelier of Edgar Brandt, Paris.</p>
+              <span class="featured-card-cta">Inquire <i class="fas fa-arrow-right"></i></span>
+            </div>
+          </div>
+
+          <div class="featured-card reveal reveal-delay-2">
+            <img class="featured-card-image" src="https://images.pexels.com/photos/18602910/pexels-photo-18602910.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Georgian longcase grandfather clock in figured oak" loading="lazy">
+            <div class="featured-card-body">
+              <span class="featured-card-number">03</span>
+              <span class="featured-card-era">Georgian, Circa 1790</span>
+              <h3 class="featured-card-title">Longcase<br>Grandfather Clock</h3>
+              <p class="featured-card-text">Figured oak longcase clock with brass moon phase dial and original winding key. Fully restored movement by our master clockmaker.</p>
+              <span class="featured-card-cta">Inquire <i class="fas fa-arrow-right"></i></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="story">
+      <div class="container">
+        <div class="story-grid">
+          <div class="story-media reveal">
+            <img class="story-image" src="https://images.pexels.com/photos/5490303/pexels-photo-5490303.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Master Antique showroom interior with curated displays" loading="lazy">
+            <div class="story-media-accent"></div>
+          </div>
+
+          <div class="story-content">
+            <span class="section-label reveal">Since 1892</span>
+            <h2 class="section-title reveal reveal-delay-1">A Legacy of<br>Discernment</h2>
+            <div class="gold-divider reveal reveal-delay-2"></div>
+            <p class="reveal reveal-delay-2">For generations, Master Antique has served as a destination for those who recognise that true beauty transcends time. Our founder, a master cabinetmaker, began with a simple belief: that the objects we surround ourselves with should be made to last — not just for a lifetime, but for centuries.</p>
+            <p class="reveal reveal-delay-3">Today, that philosophy endures. We travel the world to source exceptional pieces from private estates, auction houses, and artisan workshops. Each acquisition is authenticated by period specialists, restored using era-appropriate techniques, and presented with full provenance documentation.</p>
+            <div class="story-signature reveal reveal-delay-4">— Curated with conviction, preserved with care</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="stats">
+          <div class="stat-item reveal">
+            <div class="stat-number">130+</div>
+            <div class="stat-label">Years of Curation</div>
+          </div>
+          <div class="stat-item reveal reveal-delay-1">
+            <div class="stat-number">2,400+</div>
+            <div class="stat-label">Authenticated Pieces</div>
+          </div>
+          <div class="stat-item reveal reveal-delay-2">
+            <div class="stat-number">38</div>
+            <div class="stat-label">Countries Sourced</div>
+          </div>
+          <div class="stat-item reveal reveal-delay-3">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Authenticity Guarantee</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials">
+      <div class="container">
+        <div class="featured-header">
+          <span class="section-label reveal">Collector's Voices</span>
+          <h2 class="section-title reveal reveal-delay-1">Trusted by Discerning<br>Collectors Worldwide</h2>
+          <div class="gold-divider reveal reveal-delay-2" style="margin: var(--spacing-xl) auto;"></div>
+        </div>
+
+        <div class="testimonials-grid">
+          <div class="testimonial-card reveal">
+            <div class="testimonial-quote">"</div>
+            <p class="testimonial-text">Master Antique sourced a Victorian writing desk for my study that had belonged to a minor noble family in Kent. The provenance documentation was meticulous, and the restoration work is invisible — it looks exactly as it would have in 1860.</p>
+            <div class="testimonial-author">
+              <img class="testimonial-avatar" src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=100" alt="James H." loading="lazy">
+              <div>
+                <div class="testimonial-name">James H.</div>
+                <div class="testimonial-role">Collector, London</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card reveal reveal-delay-1">
+            <div class="testimonial-quote">"</div>
+            <p class="testimonial-text">I have purchased from auction houses across Europe, but nowhere have I experienced the level of expertise and genuine passion that the team at Master Antique brings. Their knowledge of Georgian furniture is unparalleled.</p>
+            <div class="testimonial-author">
+              <img class="testimonial-avatar" src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=100" alt="Eleanor V." loading="lazy">
+              <div>
+                <div class="testimonial-name">Eleanor V.</div>
+                <div class="testimonial-role">Interior Architect, Dubai</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card reveal reveal-delay-2">
+            <div class="testimonial-quote">"</div>
+            <p class="testimonial-text">The brass carriage clock I acquired has become the centrepiece of my collection. Every time I wind it, I am reminded that some things are made with a permanence that modern manufacturing has forgotten.</p>
+            <div class="testimonial-author">
+              <img class="testimonial-avatar" src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=100" alt="Marcus L." loading="lazy">
+              <div>
+                <div class="testimonial-name">Marcus L.</div>
+                <div class="testimonial-role">Private Collector, New York</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="scarcity-banner">
+      <div class="container">
+        <p>Each piece is <span>one of a kind</span> — once acquired, it may never return to the market.</p>
+      </div>
+    </section>
+
+    <section class="newsletter">
+      <div class="container">
+        <div class="reveal">
+          <span class="section-label">Private Viewings</span>
+          <h2 class="section-title">Join the Collector's Circle</h2>
+          <p class="section-subtitle">Receive curated previews of new acquisitions, exclusive invitations to private viewings, and insights from our restoration studio.</p>
+          <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you. You will receive an invitation to our next private viewing.');">
+            <input type="email" placeholder="Enter your email address" required aria-label="Email address">
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="./Index.html" class="logo">Master&nbsp;<span>Antique</span></a>
+          <p>Since 1892, we have been curating the world's finest antiques for discerning collectors who value authenticity, craftsmanship, and enduring beauty.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="./Index.html">Home</a></li>
+            <li><a href="./HTML/about.html">Our Heritage</a></li>
+            <li><a href="./HTML/product.html">The Collection</a></li>
+            <li><a href="./HTML/rag.html">Antique AI</a></li>
+            <li><a href="./HTML/contact.html">Contact &amp; Viewings</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Periods</h4>
+          <ul>
+            <li><a href="./HTML/product.html">Victorian</a></li>
+            <li><a href="./HTML/product.html">Georgian</a></li>
+            <li><a href="./HTML/product.html">Art Deco</a></li>
+            <li><a href="./HTML/product.html">Mid-Century</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h4>Visit Our Showroom</h4>
+          <p><i class="fas fa-map-marker-alt"></i> 42 Heritage Lane, Karachi</p>
+          <p><i class="fas fa-phone"></i> +92 300 123 4567</p>
+          <p><i class="fas fa-envelope"></i> hello@masterantique.com</p>
+          <p style="margin-top: var(--spacing-sm); font-style: italic; font-size: 0.8rem;">Viewings by appointment preferred</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2025 Master Antique. All rights reserved.</span>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Sale</a>
+          <a href="./admin/index.html" style="opacity:0.35;font-size:0.7rem;">Admin</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Social -->
+  <div class="social-float">
+    <button class="social-toggle" aria-label="Toggle social media">
+      <i class="fas fa-share-alt"></i>
+    </button>
+    <div class="social-drawer">
+      <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://pinterest.com" target="_blank" rel="noopener" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+      <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+    </div>
   </div>
 
-  <section class="hero">
-    <h1>Preserving the Elegance of the Past</h1>
-    <p>Discover timeless pieces with a story.</p>
-  </section>
-
-
-    <!-- Footer Section -->
-     <footer>
-  <div class="footer-container">
-    <div class="footer-section">
-      <h3>About Us</h3>
-      <p>We create modern, high-performance websites and applications tailored for your business success.</p>
-    </div>
-
-    <div class="footer-section">
-      <h3>Quick Links</h3>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-section">
-      <h3>Contact</h3>
-      <div class="footer-Section-main">
-        <p><i class="fas fa-map-marker-alt"></i> Karachi, Pakistan</p>
-        <p><i class="fas fa-phone"></i> +92 300 1234567</p>
-        <p><i class="fas fa-envelope"></i> info@yourwebsite.com</p>
-      </div>
-    </div>
-
-    <div class="footer-section">
-      <h3>Follow Us</h3>
-      <div class="social-icons">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-      </div>
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    <p>&copy; 2025 K&H TECH SOL. All Rights Reserved.</p>
-  </div>
-</footer>
-
-    <script src='./JS/app.js'></script>
+  <script src="./JS/app.js"></script>
 </body>
-
 </html>

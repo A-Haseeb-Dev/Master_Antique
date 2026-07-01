@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Velvet Armchair",
+    "era": "mid-century",
+    "description": "Mid-Century Modern armchair attributed to Finn Juhl. Olive velvet upholstery with teak armrests.",
+    "provenance": "Copenhagen, Denmark",
+    "badge": "One of One",
+    "price": 2800,
+    "image": "https://images.pexels.com/photos/18448275/pexels-photo-18448275.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "status": "available"
+  },
+  {
+    "name": "Porcelain & Gold Vase",
+    "era": "victorian",
+    "description": "Hand-painted porcelain vase with intricate 24k gold leaf detailing. Royal Worcester manufacture.",
+    "provenance": "Worcester, England",
+    "badge": "Rare",
+    "price": 1950,
+    "image": "https://images.pexels.com/photos/18424382/pexels-photo-18424382.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "status": "available"
+  },
+  {
+    "name": "Stained Glass Lamp",
+    "era": "art-deco",
+    "description": "Art Deco figural table lamp with handcrafted stained glass shade. Attributed to Edgar Brandt.",
+    "provenance": "Paris, France",
+    "badge": "One of One",
+    "price": 3200,
+    "image": "https://images.pexels.com/photos/18160202/pexels-photo-18160202.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "status": "available"
+  },
+  {
+    "name": "Brass Carriage Clock",
+    "era": "georgian",
+    "description": "Fine brass carriage clock with 8-day French movement. White porcelain dial with Roman numerals.",
+    "provenance": "John Grant & Son, London",
+    "badge": "Recently Acquired",
+    "price": 4500,
+    "image": "https://images.pexels.com/photos/18602910/pexels-photo-18602910.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "status": "available"
+  },
+  {
+    "name": "Mahogany Writing Desk",
+    "era": "georgian",
+    "description": "Georgian mahogany pedestal writing desk with leather insert top and brass handles.",
+    "provenance": "Thomas Chippendale school, London",
+    "badge": "One of One",
+    "price": 5600,
+    "image": "https://images.pexels.com/photos/5490303/pexels-photo-5490303.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "status": "available"
+  },
+  {
+    "name": "Studio Pottery Bowl",
+    "era": "mid-century",
+    "description": "Mid-century studio pottery bowl with organic glazes. Lucie Rie studio.",
+    "provenance": "London, England",
+    "badge": "Rare",
+    "price": 1200,
+    "image": "https://images.pexels.com/photos/15211802/pexels-photo-15211802.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "status": "available"
+  },
+  {
+    "name": "Crystal & Bronze Chandelier",
+    "era": "art-deco",
+    "description": "Art Deco crystal and bronze chandelier with six lights. Atelier Ruhlmann.",
+    "provenance": "Paris, France",
+    "badge": "Recently Acquired",
+    "price": 12500,
+    "image": "https://images.pexels.com/photos/11418721/pexels-photo-11418721.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "status": "available"
+  },
+  {
+    "name": "Silver Tea Service",
+    "era": "victorian",
+    "description": "Victorian silver tea service with ornate repouss\u00e9 detailing. Garrard & Co.",
+    "provenance": "London, England",
+    "badge": "One of One",
+    "price": 8900,
+    "image": "https://images.pexels.com/photos/7303847/pexels-photo-7303847.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "status": "available"
+  }
+]

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Dashboard — Master Antique Admin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Crimson+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/admin.css">
+</head>
+<body>
+  <div class="dashboard">
+
+    <!-- ─── Sidebar ─── -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <a href="../Index.html">Master&nbsp;<span>Antique</span></a>
+      </div>
+      <ul class="sidebar-nav">
+        <li><a href="#" data-page="overview" class="active"><i class="fas fa-chart-simple"></i><span>Overview</span></a></li>
+        <li><a href="#" data-page="products"><i class="fas fa-couch"></i><span>Products</span></a></li>
+        <li><a href="#" data-page="messages"><i class="fas fa-envelope"></i><span>Inquiries</span></a></li>
+        <li><a href="#" data-page="settings"><i class="fas fa-gear"></i><span>Settings</span></a></li>
+      </ul>
+      <div class="sidebar-footer">
+        <a href="../Index.html" target="_blank"><i class="fas fa-external-link-alt"></i><span>View Site</span></a>
+        <a href="#" id="logout-link" style="margin-top:8px;"><i class="fas fa-right-from-bracket"></i><span>Logout</span></a>
+      </div>
+    </aside>
+
+    <!-- ─── Main ─── -->
+    <main class="main-content">
+
+      <!-- Toast -->
+      <div id="toast" class="toast"></div>
+
+      <!-- ─── Page Header ─── -->
+      <div class="page-header">
+        <div>
+          <h1 id="page-title">Overview</h1>
+          <p>Manage your antique collection</p>
+        </div>
+      </div>
+
+      <!-- ─── Section: Overview ─── -->
+      <section id="section-overview">
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fas fa-couch"></i></div>
+            <h3 id="stat-products">0</h3>
+            <p>Total Products</p>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fas fa-envelope"></i></div>
+            <h3 id="stat-messages">0</h3>
+            <p>Total Inquiries</p>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fas fa-envelope-open"></i></div>
+            <h3 id="stat-unread">0</h3>
+            <p>Unread</p>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fas fa-check-circle"></i></div>
+            <h3 id="stat-instock">0</h3>
+            <p>In Stock</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── Section: Products ─── -->
+      <section id="section-products" style="display:none;">
+        <div class="content-card">
+          <div class="content-card-header">
+            <h2>All Products</h2>
+            <button id="add-product-btn" class="btn btn-gold"><i class="fas fa-plus"></i> Add Product</button>
+          </div>
+          <div class="content-card-body">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th style="width:50px;">Image</th>
+                  <th>Name</th>
+                  <th>Era</th>
+                  <th>Price</th>
+                  <th>Status</th>
+                  <th style="width:110px;">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="products-tbody"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── Section: Messages ─── -->
+      <section id="section-messages" style="display:none;">
+        <div class="content-card">
+          <div class="content-card-header">
+            <h2>Customer Inquiries</h2>
+          </div>
+          <div class="content-card-body" id="messages-container"></div>
+        </div>
+      </section>
+
+      <!-- ─── Section: Settings ─── -->
+      <section id="section-settings" style="display:none;">
+        <div class="content-card">
+          <div class="content-card-header">
+            <h2>Admin Credentials</h2>
+          </div>
+          <div class="content-card-body">
+            <form id="settings-form" style="max-width:400px;">
+              <div class="form-group">
+                <label for="s-username">New Username</label>
+                <input type="text" id="s-username" class="form-input" placeholder="Enter new username" required>
+              </div>
+              <div class="form-group">
+                <label for="s-password">New Password</label>
+                <input type="password" id="s-password" class="form-input" placeholder="Enter new password" required>
+              </div>
+              <button type="submit" class="btn btn-gold">Update Credentials</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- ─── Product Modal ─── -->
+  <div class="modal-overlay" id="product-modal">
+    <div class="modal">
+      <div class="modal-header">
+        <h2 id="modal-title">Add Product</h2>
+        <button class="modal-close">&times;</button>
+      </div>
+      <form id="product-form">
+        <div class="modal-body">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="p-name">Product Name *</label>
+              <input type="text" id="p-name" class="form-input" placeholder="e.g. Victorian Mahogany Desk" required>
+            </div>
+            <div class="form-group">
+              <label for="p-era">Era *</label>
+              <input type="text" id="p-era" class="form-input" placeholder="e.g. Victorian" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="p-price">Price ($) *</label>
+              <input type="number" id="p-price" class="form-input" placeholder="e.g. 4500" min="0" step="0.01" required>
+            </div>
+            <div class="form-group">
+              <label for="p-status">Status</label>
+              <select id="p-status" class="form-input" style="cursor:pointer;">
+                <option value="available">Available</option>
+                <option value="sold">Sold</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="p-image">Image URL</label>
+            <input type="url" id="p-image" class="form-input" placeholder="https://images.pexels.com/...">
+          </div>
+          <div class="form-group">
+            <label for="p-badge">Badge (optional)</label>
+            <input type="text" id="p-badge" class="form-input" placeholder="e.g. One of One, Rare, Recently Acquired">
+          </div>
+          <div class="form-group">
+            <label for="p-description">Description</label>
+            <textarea id="p-description" class="form-input" rows="3" placeholder="Describe the piece..."></textarea>
+          </div>
+          <div class="form-group">
+            <label for="p-provenance">Provenance</label>
+            <input type="text" id="p-provenance" class="form-input" placeholder="e.g. Estate of Lady Margaret Whitmore">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline modal-cancel">Cancel</button>
+          <button type="submit" class="btn btn-gold">Save Product</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>

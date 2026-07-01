@@ -1,165 +1,232 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Product Page</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel='stylesheet' type='text/css' media='screen' href='../CSS/style.css'>
-    <link rel='stylesheet' type='text/css' media='screen' href='../CSS/media.css'>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>The Collection — Master Antique</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore Master Antique's curated collection of authenticated antiques — Victorian, Georgian, Art Deco and Mid-Century furniture, ceramics, lighting and decorative arts.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="../CSS/style.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="../CSS/media.css">
 </head>
-
 <body>
-    <!-- Navbar Section -->
-    <header>
-    <nav class="navbar">
-      <div class="logo">Master Antique</div>
 
-      <div class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
+  <header>
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+      <div class="navbar-inner">
+        <a href="../Index.html" class="logo">Master&nbsp;<span>Antique</span></a>
+
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <ul class="nav-links" id="nav-links">
+          <li><a href="../Index.html">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./product.html">Collection</a></li>
+          <li><a href="./rag.html">Antique AI</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
       </div>
-
-      <ul class="nav-links" id="nav-links">
-        <li><a href="../Index.html">Home</a></li>
-        <li><a href="./about.html">About</a></li>
-        <li><a href="./product.html">Products</a></li>
-        <li><a href="./contact.html">Contact</a></li>
-      </ul>
     </nav>
   </header>
 
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <span class="section-label reveal">The Collection</span>
+        <h1 class="section-title reveal reveal-delay-1">Curated<br>Masterpieces</h1>
+        <div class="gold-divider reveal reveal-delay-2" style="margin: var(--spacing-lg) auto;"></div>
+        <p class="section-subtitle reveal reveal-delay-3">Every piece authenticated, restored, and presented with full provenance. Each is one of a kind — once acquired, it may never return.</p>
+      </div>
+    </section>
 
-    <div class="Product-Page-Head">Our Product</div>
+    <section class="section">
+      <div class="container">
+        <div class="product-controls reveal">
+          <button class="active" data-era="all">All Periods</button>
+          <button data-era="victorian">Victorian</button>
+          <button data-era="georgian">Georgian</button>
+          <button data-era="art-deco">Art Deco</button>
+          <button data-era="mid-century">Mid-Century</button>
+        </div>
 
+        <div class="products-grid" id="products-grid"></div>
+      </div>
+    </section>
 
+    <section class="scarcity-banner">
+      <div class="container">
+        <p>All pieces come with a <span>Certificate of Authenticity</span> and detailed provenance documentation.</p>
+      </div>
+    </section>
+  </main>
 
-    <div class="products">
-        <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1754634026426-4bc23801b618?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyMnx8fGVufDB8fHx8fA%3D%3D" alt="Product Image">
-            <div class="product-info">
-                <div class="product-title">Stylish Watch</div>
-                <div class="product-price">$99.99</div>
-                <div class="product-desc">A premium quality stylish watch that enhances your fashion.</div>
-                <a href="#" class="buy-btn">Buy Now</a>
-            </div>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../Index.html" class="logo">Master&nbsp;<span>Antique</span></a>
+          <p>Since 1892, we have been curating the world's finest antiques for discerning collectors who value authenticity, craftsmanship, and enduring beauty.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
         </div>
-        <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1754634026426-4bc23801b618?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyMnx8fGVufDB8fHx8fA%3D%3D" alt="Product Image">
-            <div class="product-info">
-                <div class="product-title">Stylish Watch</div>
-                <div class="product-price">$99.99</div>
-                <div class="product-desc">A premium quality stylish watch that enhances your fashion.</div>
-                <a href="#" class="buy-btn">Buy Now</a>
-            </div>
+
+        <div>
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="../Index.html">Home</a></li>
+            <li><a href="./about.html">Our Heritage</a></li>
+            <li><a href="./product.html">The Collection</a></li>
+            <li><a href="./rag.html">Antique AI</a></li>
+            <li><a href="./contact.html">Contact &amp; Viewings</a></li>
+          </ul>
         </div>
-        <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1754634026426-4bc23801b618?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyMnx8fGVufDB8fHx8fA%3D%3D" alt="Product Image">
-            <div class="product-info">
-                <div class="product-title">Stylish Watch</div>
-                <div class="product-price">$99.99</div>
-                <div class="product-desc">A premium quality stylish watch that enhances your fashion.</div>
-                <a href="#" class="buy-btn">Buy Now</a>
-            </div>
+
+        <div>
+          <h4>Periods</h4>
+          <ul>
+            <li><a href="./product.html">Victorian</a></li>
+            <li><a href="./product.html">Georgian</a></li>
+            <li><a href="./product.html">Art Deco</a></li>
+            <li><a href="./product.html">Mid-Century</a></li>
+          </ul>
         </div>
-        <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1754634026426-4bc23801b618?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyMnx8fGVufDB8fHx8fA%3D%3D" alt="Product Image">
-            <div class="product-info">
-                <div class="product-title">Stylish Watch</div>
-                <div class="product-price">$99.99</div>
-                <div class="product-desc">A premium quality stylish watch that enhances your fashion.</div>
-                <a href="#" class="buy-btn">Buy Now</a>
-            </div>
+
+        <div class="footer-contact">
+          <h4>Visit Our Showroom</h4>
+          <p><i class="fas fa-map-marker-alt"></i> 42 Heritage Lane, Karachi</p>
+          <p><i class="fas fa-phone"></i> +92 300 123 4567</p>
+          <p><i class="fas fa-envelope"></i> hello@masterantique.com</p>
+          <p style="margin-top: var(--spacing-sm); font-style: italic; font-size: 0.8rem;">Viewings by appointment preferred</p>
         </div>
-        <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1754634026426-4bc23801b618?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyMnx8fGVufDB8fHx8fA%3D%3D" alt="Product Image">
-            <div class="product-info">
-                <div class="product-title">Stylish Watch</div>
-                <div class="product-price">$99.99</div>
-                <div class="product-desc">A premium quality stylish watch that enhances your fashion.</div>
-                <a href="#" class="buy-btn">Buy Now</a>
-            </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2025 Master Antique. All rights reserved.</span>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Sale</a>
+          <a href="../admin/index.html" style="opacity:0.35;font-size:0.7rem;">Admin</a>
         </div>
-        <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1754634026426-4bc23801b618?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyMnx8fGVufDB8fHx8fA%3D%3D" alt="Product Image">
-            <div class="product-info">
-                <div class="product-title">Stylish Watch</div>
-                <div class="product-price">$99.99</div>
-                <div class="product-desc">A premium quality stylish watch that enhances your fashion.</div>
-                <a href="#" class="buy-btn">Buy Now</a>
-            </div>
-        </div>
-        <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1754634026426-4bc23801b618?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyMnx8fGVufDB8fHx8fA%3D%3D" alt="Product Image">
-            <div class="product-info">
-                <div class="product-title">Stylish Watch</div>
-                <div class="product-price">$99.99</div>
-                <div class="product-desc">A premium quality stylish watch that enhances your fashion.</div>
-                <a href="#" class="buy-btn">Buy Now</a>
-            </div>
-        </div>
-        <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1754634026426-4bc23801b618?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyMnx8fGVufDB8fHx8fA%3D%3D" alt="Product Image">
-            <div class="product-info">
-                <div class="product-title">Stylish Watch</div>
-                <div class="product-price">$99.99</div>
-                <div class="product-desc">A premium quality stylish watch that enhances your fashion.</div>
-                <a href="#" class="buy-btn">Buy Now</a>
-            </div>
-        </div>
+      </div>
     </div>
+  </footer>
 
+  <!-- Floating Social -->
+  <div class="social-float">
+    <button class="social-toggle" aria-label="Toggle social media">
+      <i class="fas fa-share-alt"></i>
+    </button>
+    <div class="social-drawer">
+      <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://pinterest.com" target="_blank" rel="noopener" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+      <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+    </div>
+  </div>
 
+  <script src="../JS/app.js"></script>
+  <script>
+    (function () {
+      function escapeHtml(str) {
+        if (!str) return '';
+        return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+      }
 
+      /* ─── Default Products (fallback + seed) ─── */
+      var defaults = [
+        { name: 'Velvet Armchair', era: 'mid-century', label: 'Mid-Century Modern, Circa 1954', origin: 'Attributed to Finn Juhl — Copenhagen, Denmark', price: 2800, badge: 'One of One', image: 'https://images.pexels.com/photos/18448275/pexels-photo-18448275.jpeg?auto=compress&cs=tinysrgb&w=600', status: 'available' },
+        { name: 'Porcelain & Gold Vase', era: 'victorian', label: 'Victorian Era, Circa 1885', origin: 'Royal Worcester — Worcester, England', price: 1950, badge: 'Rare', image: 'https://images.pexels.com/photos/18424382/pexels-photo-18424382.jpeg?auto=compress&cs=tinysrgb&w=600', status: 'available' },
+        { name: 'Stained Glass Lamp', era: 'art-deco', label: 'Art Deco, Circa 1927', origin: 'Attributed to Edgar Brandt — Paris, France', price: 3200, badge: 'One of One', image: 'https://images.pexels.com/photos/18160202/pexels-photo-18160202.jpeg?auto=compress&cs=tinysrgb&w=600', status: 'available' },
+        { name: 'Brass Carriage Clock', era: 'georgian', label: 'Georgian, Circa 1795', origin: 'John Grant & Son — London, England', price: 4500, badge: 'Recently Acquired', image: 'https://images.pexels.com/photos/18602910/pexels-photo-18602910.jpeg?auto=compress&cs=tinysrgb&w=600', status: 'available' },
+        { name: 'Mahogany Writing Desk', era: 'georgian', label: 'Georgian, Circa 1780', origin: 'Thomas Chippendale school — London, England', price: 5600, badge: 'One of One', image: 'https://images.pexels.com/photos/5490303/pexels-photo-5490303.jpeg?auto=compress&cs=tinysrgb&w=600', status: 'available' },
+        { name: 'Studio Pottery Bowl', era: 'mid-century', label: 'Mid-Century, Circa 1958', origin: 'Lucie Rie studio — London, England', price: 1200, badge: 'Rare', image: 'https://images.pexels.com/photos/15211802/pexels-photo-15211802.jpeg?auto=compress&cs=tinysrgb&w=600', status: 'available' },
+        { name: 'Crystal & Bronze Chandelier', era: 'art-deco', label: 'Art Deco, Circa 1930', origin: 'Atelier of Jacques-Émile Ruhlmann — Paris, France', price: 12500, badge: 'Recently Acquired', image: 'https://images.pexels.com/photos/11418721/pexels-photo-11418721.jpeg?auto=compress&cs=tinysrgb&w=600', status: 'available' },
+        { name: 'Silver Tea Service', era: 'victorian', label: 'Victorian Era, Circa 1875', origin: 'Garrard & Co. — London, England', price: 8900, badge: 'One of One', image: 'https://images.pexels.com/photos/7303847/pexels-photo-7303847.jpeg?auto=compress&cs=tinysrgb&w=600', status: 'available' }
+      ];
 
-    <footer>
-        <div class="footer-container">
-            <div class="footer-section">
-                <h3>About Us</h3>
-                <p>We create modern, high-performance websites and applications tailored for your business success.</p>
-            </div>
+      /* ─── Seed localStorage if empty ─── */
+      var stored;
+      try { stored = JSON.parse(localStorage.getItem('ma_products')); } catch (e) { stored = null; }
+      if (!stored || stored.length === 0) {
+        localStorage.setItem('ma_products', JSON.stringify(defaults));
+        stored = defaults;
+      }
 
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </div>
+      /* ─── Render Products ─── */
+      var grid = document.getElementById('products-grid');
+      var currentEra = 'all';
 
-            <div class="footer-section">
-                <h3>Contact</h3>
-                <div class="footer-Section-main">
-                    <p><i class="fas fa-map-marker-alt"></i> Karachi, Pakistan</p>
-                    <p><i class="fas fa-phone"></i> +92 300 1234567</p>
-                    <p><i class="fas fa-envelope"></i> info@yourwebsite.com</p>
-                </div>
-            </div>
+      function render(era) {
+        grid.innerHTML = '';
+        var filtered = era === 'all' ? stored : stored.filter(function (p) { return p.era === era; });
 
-            <div class="footer-section">
-                <h3>Follow Us</h3>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-            </div>
-        </div>
+        filtered.forEach(function (p, i) {
+          var card = document.createElement('div');
+          card.className = 'product-card reveal' + (i % 2 === 0 ? '' : ' reveal-delay-1');
+          card.setAttribute('data-era', p.era);
+          if (era !== 'all' || filtered.length > 0) card.style.display = '';
 
-        <div class="footer-bottom">
-            <p>&copy; 2025 K&H TECH SOL. All Rights Reserved.</p>
-        </div>
-    </footer>
+          var badgeHtml = p.badge ? '<span class="product-card-badge">' + escapeHtml(p.badge) + '</span>' : '';
+          var priceFormatted = '$' + p.price.toLocaleString();
+          var label = p.label || p.era.charAt(0).toUpperCase() + p.era.slice(1).replace('-', ' ') + ', Circa 19xx';
+          var origin = p.origin || p.provenance || 'Authenticated by Master Antique';
 
+          card.innerHTML =
+            '<div class="product-card-image">' +
+              '<img src="' + p.image + '" alt="' + escapeHtml(p.name) + '" loading="lazy">' +
+              badgeHtml +
+            '</div>' +
+            '<div class="product-card-body">' +
+              '<span class="product-card-era">' + escapeHtml(label) + '</span>' +
+              '<h3 class="product-card-title">' + escapeHtml(p.name) + '</h3>' +
+              '<p class="product-card-origin">' + escapeHtml(origin) + '</p>' +
+              '<span class="product-card-price">' + priceFormatted + '</span>' +
+              '<div>' +
+                '<a href="./contact.html" class="product-card-cta">Inquire <i class="fas fa-arrow-right"></i></a>' +
+              '</div>' +
+            '</div>';
 
-    <script src='../JS/app.js'></script>
+          grid.appendChild(card);
+        });
+
+        /* reveal visible cards */
+        if ('IntersectionObserver' in window) {
+          var observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+              }
+            });
+          }, { threshold: 0.1 });
+          grid.querySelectorAll('.product-card').forEach(function (c) { observer.observe(c); });
+        } else {
+          grid.querySelectorAll('.product-card').forEach(function (c) { c.classList.add('visible'); });
+        }
+      }
+
+      /* ─── Filters ─── */
+      var buttons = document.querySelectorAll('.product-controls button');
+      buttons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          buttons.forEach(function (b) { b.classList.remove('active'); });
+          btn.classList.add('active');
+          currentEra = btn.getAttribute('data-era');
+          render(currentEra);
+        });
+      });
+
+      render('all');
+    })();
+  </script>
 </body>
-
 </html>
