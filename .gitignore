@@ -1,39 +1,28 @@
-# Node
-node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-package-lock.json
-yarn.lock
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
 
-# Environment
-.env
-.env.local
-.env.*.local
+# next.js
+/.next/
+/out/
+next-env.d.ts
 
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
+# production
+/build
+
+# misc
 .DS_Store
-Thumbs.db
+*.pem
 
-# Logs
-logs/
-*.log
+# debug / runtime logs
+npm-debug.log*
+start.log
+start.err
 
-# Server
-server/node_modules/
-server/.env
+# local env files
+.env*.local
+.env
 
-# Build
-dist/
-build/
-out/
-
-# Runtime
-*.pid
-*.seed
-*.pid.lock
+# vercel
+.vercel
