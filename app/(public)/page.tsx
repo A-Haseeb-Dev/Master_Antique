@@ -1,6 +1,6 @@
 import HeroCarousel from "@/components/HeroCarousel";
 import NewsletterForm from "@/components/NewsletterForm";
-import { Reveal, StaggerReveal, CountUp, MagneticButton } from "@/components/animations";
+import { Reveal, CountUp, MagneticButton } from "@/components/animations";
 
 export default function HomePage() {
   return (
@@ -38,12 +38,8 @@ export default function HomePage() {
             </Reveal>
           </div>
 
-          <StaggerReveal
-            className="featured-grid"
-            staggerDelay={0.15}
-            as="div"
-          >
-            <div className="featured-card">
+          <div className="featured-grid">
+            <Reveal className="featured-card" delay={0}>
               <img
                 className="featured-card-image"
                 src="https://images.pexels.com/photos/18424382/pexels-photo-18424382.jpeg?auto=compress&cs=tinysrgb&w=700"
@@ -66,9 +62,9 @@ export default function HomePage() {
                   Inquire <i className="fas fa-arrow-right"></i>
                 </span>
               </div>
-            </div>
+            </Reveal>
 
-            <div className="featured-card">
+            <Reveal className="featured-card" delay={0.15}>
               <img
                 className="featured-card-image"
                 src="https://images.pexels.com/photos/18160202/pexels-photo-18160202.jpeg?auto=compress&cs=tinysrgb&w=700"
@@ -91,9 +87,9 @@ export default function HomePage() {
                   Inquire <i className="fas fa-arrow-right"></i>
                 </span>
               </div>
-            </div>
+            </Reveal>
 
-            <div className="featured-card">
+            <Reveal className="featured-card" delay={0.3}>
               <img
                 className="featured-card-image"
                 src="https://images.pexels.com/photos/18602910/pexels-photo-18602910.jpeg?auto=compress&cs=tinysrgb&w=700"
@@ -116,8 +112,8 @@ export default function HomePage() {
                   Inquire <i className="fas fa-arrow-right"></i>
                 </span>
               </div>
-            </div>
-          </StaggerReveal>
+            </Reveal>
+          </div>
         </div>
       </section>
 
@@ -178,32 +174,32 @@ export default function HomePage() {
 
       <section className="section">
         <div className="container">
-          <StaggerReveal className="stats" staggerDelay={0.1}>
-            <div className="stat-item">
+          <div className="stats">
+            <Reveal className="stat-item" delay={0} distance={30}>
               <div className="stat-number">
                 <CountUp end={130} suffix="+" />
               </div>
               <div className="stat-label">Years of Curation</div>
-            </div>
-            <div className="stat-item">
+            </Reveal>
+            <Reveal className="stat-item" delay={0.1} distance={30}>
               <div className="stat-number">
                 <CountUp end={2400} suffix="+" />
               </div>
               <div className="stat-label">Authenticated Pieces</div>
-            </div>
-            <div className="stat-item">
+            </Reveal>
+            <Reveal className="stat-item" delay={0.2} distance={30}>
               <div className="stat-number">
                 <CountUp end={38} />
               </div>
               <div className="stat-label">Countries Sourced</div>
-            </div>
-            <div className="stat-item">
+            </Reveal>
+            <Reveal className="stat-item" delay={0.3} distance={30}>
               <div className="stat-number">
                 <CountUp end={100} suffix="%" />
               </div>
               <div className="stat-label">Authenticity Guarantee</div>
-            </div>
-          </StaggerReveal>
+            </Reveal>
+          </div>
         </div>
       </section>
 
@@ -228,12 +224,8 @@ export default function HomePage() {
             </Reveal>
           </div>
 
-          <StaggerReveal
-            className="testimonials-grid"
-            staggerDelay={0.15}
-            as="div"
-          >
-            <div className="testimonial-card">
+          <div className="testimonials-grid">
+            <Reveal className="testimonial-card" delay={0}>
               <div className="testimonial-quote">&quot;</div>
               <p className="testimonial-text">
                 Master Antique sourced a Victorian writing desk for my study that had
@@ -253,9 +245,9 @@ export default function HomePage() {
                   <div className="testimonial-role">Collector, London</div>
                 </div>
               </div>
-            </div>
+            </Reveal>
 
-            <div className="testimonial-card">
+            <Reveal className="testimonial-card" delay={0.15}>
               <div className="testimonial-quote">&quot;</div>
               <p className="testimonial-text">
                 I have purchased from auction houses across Europe, but nowhere have I
@@ -275,9 +267,9 @@ export default function HomePage() {
                   <div className="testimonial-role">Interior Architect, Dubai</div>
                 </div>
               </div>
-            </div>
+            </Reveal>
 
-            <div className="testimonial-card">
+            <Reveal className="testimonial-card" delay={0.3}>
               <div className="testimonial-quote">&quot;</div>
               <p className="testimonial-text">
                 The brass carriage clock I acquired has become the centrepiece of my
@@ -296,8 +288,8 @@ export default function HomePage() {
                   <div className="testimonial-role">Private Collector, New York</div>
                 </div>
               </div>
-            </div>
-          </StaggerReveal>
+            </Reveal>
+          </div>
         </div>
       </section>
 

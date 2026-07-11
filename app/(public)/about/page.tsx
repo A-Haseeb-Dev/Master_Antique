@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Reveal, StaggerReveal, CountUp } from "@/components/animations";
+import { Reveal, CountUp } from "@/components/animations";
 
 export const metadata: Metadata = {
   title: "Our Heritage",
@@ -169,15 +169,13 @@ export default function AboutPage() {
             </Reveal>
           </div>
 
-          <StaggerReveal
-            className="timeline"
-            staggerDelay={0.15}
-            childDistance={40}
-          >
-            {TIMELINE.map((item) => (
-              <div
+          <div className="timeline">
+            {TIMELINE.map((item, i) => (
+              <Reveal
                 key={item.year}
                 className="timeline-item"
+                delay={i * 0.15}
+                distance={40}
               >
                 <div className="timeline-dot"></div>
                 <div className="timeline-content">
@@ -185,9 +183,9 @@ export default function AboutPage() {
                   <div className="timeline-title">{item.title}</div>
                   <div className="timeline-text">{item.text}</div>
                 </div>
-              </div>
+              </Reveal>
             ))}
-          </StaggerReveal>
+          </div>
         </div>
       </section>
 
@@ -208,55 +206,53 @@ export default function AboutPage() {
             </Reveal>
           </div>
 
-          <StaggerReveal
-            className="values-grid"
-            staggerDelay={0.12}
-            as="div"
-          >
-            {VALUES.map((v) => (
-              <div
+          <div className="values-grid">
+            {VALUES.map((v, i) => (
+              <Reveal
                 key={v.title}
                 className="value-card"
+                delay={0.1 + i * 0.12}
+                distance={40}
               >
                 <div className="value-icon">
                   <i className={v.icon}></i>
                 </div>
                 <h4>{v.title}</h4>
                 <p>{v.text}</p>
-              </div>
+              </Reveal>
             ))}
-          </StaggerReveal>
+          </div>
         </div>
       </section>
 
       <section className="section">
         <div className="container">
-          <StaggerReveal className="stats" staggerDelay={0.1}>
-            <div className="stat-item">
+          <div className="stats">
+            <Reveal className="stat-item" delay={0} distance={30}>
               <div className="stat-number">
                 <CountUp end={130} suffix="+" />
               </div>
               <div className="stat-label">Years of Heritage</div>
-            </div>
-            <div className="stat-item">
+            </Reveal>
+            <Reveal className="stat-item" delay={0.1} distance={30}>
               <div className="stat-number">
                 <CountUp end={4} />
               </div>
               <div className="stat-label">Generations</div>
-            </div>
-            <div className="stat-item">
+            </Reveal>
+            <Reveal className="stat-item" delay={0.2} distance={30}>
               <div className="stat-number">
                 <CountUp end={38} />
               </div>
               <div className="stat-label">Countries Sourced</div>
-            </div>
-            <div className="stat-item">
+            </Reveal>
+            <Reveal className="stat-item" delay={0.3} distance={30}>
               <div className="stat-number">
                 <CountUp end={100} suffix="%" />
               </div>
               <div className="stat-label">Authenticity Guaranteed</div>
-            </div>
-          </StaggerReveal>
+            </Reveal>
+          </div>
         </div>
       </section>
 

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import ContactForm from "@/components/ContactForm";
 import { SITE } from "@/lib/site";
-import { Reveal, StaggerReveal } from "@/components/animations";
+import { Reveal } from "@/components/animations";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -89,15 +89,13 @@ export default function ContactPage() {
               </div>
             </Reveal>
 
-            <StaggerReveal
-              className="contact-info-list"
-              staggerDelay={0.1}
-              as="div"
-            >
-              {CONTACT_CARDS.map((c) => (
-                <div
+            <div className="contact-info-list">
+              {CONTACT_CARDS.map((c, i) => (
+                <Reveal
                   key={c.title}
                   className="contact-info-card"
+                  delay={0.1 + i * 0.1}
+                  distance={30}
                 >
                   <div className="contact-info-icon">
                     <i className={c.icon}></i>
@@ -120,9 +118,9 @@ export default function ContactPage() {
                       </p>
                     )}
                   </div>
-                </div>
+                </Reveal>
               ))}
-            </StaggerReveal>
+            </div>
           </div>
         </div>
       </section>
