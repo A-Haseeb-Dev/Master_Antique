@@ -28,12 +28,12 @@ const CONTACT_CARDS = [
   {
     icon: "fas fa-phone-alt",
     title: "Telephone",
-    lines: ["+92 300 123 4567", "+92 21 3456 7890"],
+    lines: ["+92 317 3859514", "+92 343 2016535", "+92 306 2787647", "+92 345 3326647"],
   },
   {
     icon: "fas fa-envelope",
     title: "Email",
-    lines: ["hello@masterantique.com", "appraisals@masterantique.com"],
+    lines: ["salmanshery04@gmail.com"],
   },
   {
     icon: "fas fa-clock",
