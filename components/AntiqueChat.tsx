@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { motion, useInView } from "framer-motion";
 import { RagEngine } from "@/lib/rag";
 import { DEFAULT_PRODUCTS } from "@/lib/products";
 import type { AskResult, ChatResult, Product } from "@/lib/types";
@@ -52,6 +53,10 @@ export default function AntiqueChat() {
   const [thinking, setThinking] = useState(false);
   const chatRef = useRef<HTMLDivElement | null>(null);
   const idRef = useRef(0);
+  const suggestionsRef = useRef(null);
+  const chatWrapRef = useRef(null);
+  const suggestionsInView = useInView(suggestionsRef, { once: true, amount: 0.3 });
+  const chatWrapInView = useInView(chatWrapRef, { once: true, amount: 0.3 });
 
   useEffect(() => {
     setMessages([
@@ -91,15 +96,27 @@ export default function AntiqueChat() {
 
   return (
     <>
-      <div className="rag-suggestions reveal">
+      <motion.div
+        ref={suggestionsRef}
+        className="rag-suggestions"
+        initial={{ opacity: 0, y: 20 }}
+        animate={suggestionsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+      >
         {SUGGESTIONS.map((s) => (
           <button key={s} className="rag-suggestion" onClick={() => handleQuery(s)}>
             {s}
           </button>
         ))}
-      </div>
+      </motion.div>
 
-      <div className="rag-chat-wrap reveal reveal-delay-1">
+      <motion.div
+        ref={chatWrapRef}
+        className="rag-chat-wrap"
+        initial={{ opacity: 0, y: 30 }}
+        animate={chatWrapInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+        transition={{ duration: 0.7, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+      >
         <div className="rag-chat" id="rag-chat" role="log" aria-live="polite" aria-label="Chat messages" ref={chatRef}>
           {messages.map((msg) => (
             <div key={msg.id} className={`rag-msg rag-${msg.sender}`}>
@@ -154,7 +171,7 @@ export default function AntiqueChat() {
             <i className="fas fa-arrow-up"></i>
           </button>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 }

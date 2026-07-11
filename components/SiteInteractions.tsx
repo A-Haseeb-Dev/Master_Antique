@@ -2,43 +2,20 @@
 
 import { useEffect } from "react";
 
-/**
- * Client-side behavioural layer that mirrors the original `app.js`:
- *  - IntersectionObserver reveal animations for `.reveal` elements
- *  - Animated count-up for `.stat-number` elements
- * Mounted once in the root layout.
- */
 export default function SiteInteractions() {
   useEffect(() => {
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reducedMotion) return;
 
-    /* ── Reveal on scroll ── */
-    const revealEls = Array.from(document.querySelectorAll<HTMLElement>(".reveal"));
-    if (revealEls.length > 0 && "IntersectionObserver" in window) {
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("visible");
-              observer.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }
-      );
-      revealEls.forEach((el) => observer.observe(el));
-    } else {
-      revealEls.forEach((el) => el.classList.add("visible"));
-    }
+    document.documentElement.classList.add("js-reveal-ready");
 
-    /* ── Animated stat counters ── */
     const statEls = Array.from(document.querySelectorAll<HTMLElement>(".stat-number"));
-    if (
-      statEls.length > 0 &&
-      "IntersectionObserver" in window &&
-      !reducedMotion
-    ) {
-      const statObserver = new IntersectionObserver(
+    if (statEls.length === 0) return;
+
+    let statObserver: IntersectionObserver | null = null;
+
+    if (statEls.length > 0 && "IntersectionObserver" in window) {
+      statObserver = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
             if (!entry.isIntersecting) return;
@@ -58,16 +35,16 @@ export default function SiteInteractions() {
               };
               requestAnimationFrame(animate);
             }
-            statObserver.unobserve(el);
+            statObserver!.unobserve(el);
           });
         },
         { threshold: 0.5 }
       );
-      statEls.forEach((el) => statObserver.observe(el));
+      statEls.forEach((el) => statObserver!.observe(el));
     }
 
     return () => {
-      // Observers are scoped to this effect lifecycle implicitly.
+      statObserver?.disconnect();
     };
   }, []);
 

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Reveal, StaggerReveal, CountUp } from "@/components/animations";
 
 export const metadata: Metadata = {
   title: "Our Heritage",
@@ -77,27 +78,35 @@ export default function AboutPage() {
     <main>
       <section className="page-header">
         <div className="container">
-          <span className="section-label reveal">Our Heritage</span>
-          <h1 className="section-title reveal reveal-delay-1">
-            A Legacy of
-            <br />
-            Authenticity
-          </h1>
-          <div
-            className="gold-divider reveal reveal-delay-2"
-            style={{ margin: "var(--spacing-lg) auto" }}
-          ></div>
-          <p className="section-subtitle reveal reveal-delay-3">
-            For four generations, Master Antique has been defined not by the pieces we
-            sell, but by the standards we uphold.
-          </p>
+          <Reveal>
+            <span className="section-label">Our Heritage</span>
+          </Reveal>
+          <Reveal delay={0.15}>
+            <h1 className="section-title">
+              A Legacy of
+              <br />
+              Authenticity
+            </h1>
+          </Reveal>
+          <Reveal delay={0.25}>
+            <div
+              className="gold-divider"
+              style={{ margin: "var(--spacing-lg) auto" }}
+            ></div>
+          </Reveal>
+          <Reveal delay={0.3}>
+            <p className="section-subtitle">
+              For four generations, Master Antique has been defined not by the pieces we
+              sell, but by the standards we uphold.
+            </p>
+          </Reveal>
         </div>
       </section>
 
       <section className="about-story">
         <div className="container">
           <div className="about-story-grid">
-            <div className="story-media reveal">
+            <Reveal direction="left" className="story-media">
               <img
                 className="about-story-image"
                 src="https://images.pexels.com/photos/5490303/pexels-photo-5490303.jpeg?auto=compress&cs=tinysrgb&w=700"
@@ -105,8 +114,8 @@ export default function AboutPage() {
                 loading="lazy"
               />
               <div className="story-media-accent"></div>
-            </div>
-            <div className="about-story-text reveal reveal-delay-1">
+            </Reveal>
+            <Reveal delay={0.2} direction="right" className="about-story-text">
               <h3>
                 Four Generations of
                 <br />
@@ -134,7 +143,7 @@ export default function AboutPage() {
                 Art Deco, Mid-Century Modern — with the same exacting standards our
                 founder established over 130 years ago.
               </p>
-            </div>
+            </Reveal>
           </div>
         </div>
       </section>
@@ -142,23 +151,33 @@ export default function AboutPage() {
       <section className="heritage-timeline">
         <div className="container">
           <div className="featured-header">
-            <span className="section-label reveal">Our Journey</span>
-            <h2 className="section-title reveal reveal-delay-1">
-              A Timeline of
-              <br />
-              Dedication
-            </h2>
-            <div
-              className="gold-divider reveal reveal-delay-2"
-              style={{ margin: "var(--spacing-xl) auto" }}
-            ></div>
+            <Reveal>
+              <span className="section-label">Our Journey</span>
+            </Reveal>
+            <Reveal delay={0.15}>
+              <h2 className="section-title">
+                A Timeline of
+                <br />
+                Dedication
+              </h2>
+            </Reveal>
+            <Reveal delay={0.25}>
+              <div
+                className="gold-divider"
+                style={{ margin: "var(--spacing-xl) auto" }}
+              ></div>
+            </Reveal>
           </div>
 
-          <div className="timeline">
-            {TIMELINE.map((item, i) => (
+          <StaggerReveal
+            className="timeline"
+            staggerDelay={0.15}
+            childDistance={40}
+          >
+            {TIMELINE.map((item) => (
               <div
                 key={item.year}
-                className={`timeline-item reveal${i === 0 ? "" : ` reveal-delay-${Math.min(i, 4)}`}`}
+                className="timeline-item"
               >
                 <div className="timeline-dot"></div>
                 <div className="timeline-content">
@@ -168,26 +187,36 @@ export default function AboutPage() {
                 </div>
               </div>
             ))}
-          </div>
+          </StaggerReveal>
         </div>
       </section>
 
       <section className="section">
         <div className="container">
           <div className="featured-header">
-            <span className="section-label reveal">Our Principles</span>
-            <h2 className="section-title reveal reveal-delay-1">What Distinguishes Us</h2>
-            <div
-              className="gold-divider reveal reveal-delay-2"
-              style={{ margin: "var(--spacing-xl) auto" }}
-            ></div>
+            <Reveal>
+              <span className="section-label">Our Principles</span>
+            </Reveal>
+            <Reveal delay={0.15}>
+              <h2 className="section-title">What Distinguishes Us</h2>
+            </Reveal>
+            <Reveal delay={0.25}>
+              <div
+                className="gold-divider"
+                style={{ margin: "var(--spacing-xl) auto" }}
+              ></div>
+            </Reveal>
           </div>
 
-          <div className="values-grid">
-            {VALUES.map((v, i) => (
+          <StaggerReveal
+            className="values-grid"
+            staggerDelay={0.12}
+            as="div"
+          >
+            {VALUES.map((v) => (
               <div
                 key={v.title}
-                className={`value-card reveal${i === 0 ? "" : ` reveal-delay-${i}`}`}
+                className="value-card"
               >
                 <div className="value-icon">
                   <i className={v.icon}></i>
@@ -196,39 +225,49 @@ export default function AboutPage() {
                 <p>{v.text}</p>
               </div>
             ))}
-          </div>
+          </StaggerReveal>
         </div>
       </section>
 
       <section className="section">
         <div className="container">
-          <div className="stats">
-            <div className="stat-item reveal">
-              <div className="stat-number">130+</div>
+          <StaggerReveal className="stats" staggerDelay={0.1}>
+            <div className="stat-item">
+              <div className="stat-number">
+                <CountUp end={130} suffix="+" />
+              </div>
               <div className="stat-label">Years of Heritage</div>
             </div>
-            <div className="stat-item reveal reveal-delay-1">
-              <div className="stat-number">4</div>
+            <div className="stat-item">
+              <div className="stat-number">
+                <CountUp end={4} />
+              </div>
               <div className="stat-label">Generations</div>
             </div>
-            <div className="stat-item reveal reveal-delay-2">
-              <div className="stat-number">38</div>
+            <div className="stat-item">
+              <div className="stat-number">
+                <CountUp end={38} />
+              </div>
               <div className="stat-label">Countries Sourced</div>
             </div>
-            <div className="stat-item reveal reveal-delay-3">
-              <div className="stat-number">100%</div>
+            <div className="stat-item">
+              <div className="stat-number">
+                <CountUp end={100} suffix="%" />
+              </div>
               <div className="stat-label">Authenticity Guaranteed</div>
             </div>
-          </div>
+          </StaggerReveal>
         </div>
       </section>
 
       <section className="scarcity-banner">
         <div className="container">
-          <p>
-            <span>Inquire about a piece</span> — our curators will provide provenance
-            details, condition reports, and arrange a private viewing.
-          </p>
+          <Reveal>
+            <p>
+              <span>Inquire about a piece</span> — our curators will provide provenance
+              details, condition reports, and arrange a private viewing.
+            </p>
+          </Reveal>
         </div>
       </section>
     </main>

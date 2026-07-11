@@ -1,5 +1,6 @@
 import HeroCarousel from "@/components/HeroCarousel";
 import NewsletterForm from "@/components/NewsletterForm";
+import { Reveal, StaggerReveal, CountUp, MagneticButton } from "@/components/animations";
 
 export default function HomePage() {
   return (
@@ -9,28 +10,40 @@ export default function HomePage() {
       <section className="featured">
         <div className="container">
           <div className="featured-header">
-            <span className="section-label reveal">Curator&apos;s Selection</span>
-            <h2 className="section-title reveal reveal-delay-1">
-              Exceptional Pieces,
-              <br />
-              Handpicked for You
-            </h2>
-            <div
-              className="gold-divider reveal reveal-delay-2"
-              style={{ margin: "var(--spacing-xl) auto" }}
-            ></div>
-            <p
-              className="section-subtitle reveal reveal-delay-2"
-              style={{ margin: "0 auto", maxWidth: 600 }}
-            >
-              Every item in our collection undergoes rigorous authentication by period
-              specialists. These are not mere objects — they are heirlooms, investments,
-              and works of art.
-            </p>
+            <Reveal>
+              <span className="section-label">Curator&apos;s Selection</span>
+            </Reveal>
+            <Reveal delay={0.15}>
+              <h2 className="section-title">
+                Exceptional Pieces,
+                <br />
+                Handpicked for You
+              </h2>
+            </Reveal>
+            <Reveal delay={0.25}>
+              <div
+                className="gold-divider"
+                style={{ margin: "var(--spacing-xl) auto" }}
+              ></div>
+            </Reveal>
+            <Reveal delay={0.3}>
+              <p
+                className="section-subtitle"
+                style={{ margin: "0 auto", maxWidth: 600 }}
+              >
+                Every item in our collection undergoes rigorous authentication by period
+                specialists. These are not mere objects — they are heirlooms, investments,
+                and works of art.
+              </p>
+            </Reveal>
           </div>
 
-          <div className="featured-grid">
-            <div className="featured-card reveal">
+          <StaggerReveal
+            className="featured-grid"
+            staggerDelay={0.15}
+            as="div"
+          >
+            <div className="featured-card">
               <img
                 className="featured-card-image"
                 src="https://images.pexels.com/photos/18424382/pexels-photo-18424382.jpeg?auto=compress&cs=tinysrgb&w=700"
@@ -55,7 +68,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="featured-card reveal reveal-delay-1">
+            <div className="featured-card">
               <img
                 className="featured-card-image"
                 src="https://images.pexels.com/photos/18160202/pexels-photo-18160202.jpeg?auto=compress&cs=tinysrgb&w=700"
@@ -80,7 +93,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="featured-card reveal reveal-delay-2">
+            <div className="featured-card">
               <img
                 className="featured-card-image"
                 src="https://images.pexels.com/photos/18602910/pexels-photo-18602910.jpeg?auto=compress&cs=tinysrgb&w=700"
@@ -104,14 +117,14 @@ export default function HomePage() {
                 </span>
               </div>
             </div>
-          </div>
+          </StaggerReveal>
         </div>
       </section>
 
       <section className="story">
         <div className="container">
           <div className="story-grid">
-            <div className="story-media reveal">
+            <Reveal direction="left" className="story-media">
               <img
                 className="story-image"
                 src="https://images.pexels.com/photos/5490303/pexels-photo-5490303.jpeg?auto=compress&cs=tinysrgb&w=700"
@@ -119,33 +132,45 @@ export default function HomePage() {
                 loading="lazy"
               />
               <div className="story-media-accent"></div>
-            </div>
+            </Reveal>
 
             <div className="story-content">
-              <span className="section-label reveal">Since 1892</span>
-              <h2 className="section-title reveal reveal-delay-1">
-                A Legacy of
-                <br />
-                Discernment
-              </h2>
-              <div className="gold-divider reveal reveal-delay-2"></div>
-              <p className="reveal reveal-delay-2">
-                For generations, Master Antique has served as a destination for those who
-                recognise that true beauty transcends time. Our founder, a master
-                cabinetmaker, began with a simple belief: that the objects we surround
-                ourselves with should be made to last — not just for a lifetime, but for
-                centuries.
-              </p>
-              <p className="reveal reveal-delay-3">
-                Today, that philosophy endures. We travel the world to source exceptional
-                pieces from private estates, auction houses, and artisan workshops. Each
-                acquisition is authenticated by period specialists, restored using
-                era-appropriate techniques, and presented with full provenance
-                documentation.
-              </p>
-              <div className="story-signature reveal reveal-delay-4">
-                — Curated with conviction, preserved with care
-              </div>
+              <Reveal>
+                <span className="section-label">Since 1892</span>
+              </Reveal>
+              <Reveal delay={0.15}>
+                <h2 className="section-title">
+                  A Legacy of
+                  <br />
+                  Discernment
+                </h2>
+              </Reveal>
+              <Reveal delay={0.25}>
+                <div className="gold-divider"></div>
+              </Reveal>
+              <Reveal delay={0.3}>
+                <p>
+                  For generations, Master Antique has served as a destination for those who
+                  recognise that true beauty transcends time. Our founder, a master
+                  cabinetmaker, began with a simple belief: that the objects we surround
+                  ourselves with should be made to last — not just for a lifetime, but for
+                  centuries.
+                </p>
+              </Reveal>
+              <Reveal delay={0.4}>
+                <p>
+                  Today, that philosophy endures. We travel the world to source exceptional
+                  pieces from private estates, auction houses, and artisan workshops. Each
+                  acquisition is authenticated by period specialists, restored using
+                  era-appropriate techniques, and presented with full provenance
+                  documentation.
+                </p>
+              </Reveal>
+              <Reveal delay={0.5}>
+                <div className="story-signature">
+                  — Curated with conviction, preserved with care
+                </div>
+              </Reveal>
             </div>
           </div>
         </div>
@@ -153,44 +178,62 @@ export default function HomePage() {
 
       <section className="section">
         <div className="container">
-          <div className="stats">
-            <div className="stat-item reveal">
-              <div className="stat-number">130+</div>
+          <StaggerReveal className="stats" staggerDelay={0.1}>
+            <div className="stat-item">
+              <div className="stat-number">
+                <CountUp end={130} suffix="+" />
+              </div>
               <div className="stat-label">Years of Curation</div>
             </div>
-            <div className="stat-item reveal reveal-delay-1">
-              <div className="stat-number">2,400+</div>
+            <div className="stat-item">
+              <div className="stat-number">
+                <CountUp end={2400} suffix="+" />
+              </div>
               <div className="stat-label">Authenticated Pieces</div>
             </div>
-            <div className="stat-item reveal reveal-delay-2">
-              <div className="stat-number">38</div>
+            <div className="stat-item">
+              <div className="stat-number">
+                <CountUp end={38} />
+              </div>
               <div className="stat-label">Countries Sourced</div>
             </div>
-            <div className="stat-item reveal reveal-delay-3">
-              <div className="stat-number">100%</div>
+            <div className="stat-item">
+              <div className="stat-number">
+                <CountUp end={100} suffix="%" />
+              </div>
               <div className="stat-label">Authenticity Guarantee</div>
             </div>
-          </div>
+          </StaggerReveal>
         </div>
       </section>
 
       <section className="testimonials">
         <div className="container">
           <div className="featured-header">
-            <span className="section-label reveal">Collector&apos;s Voices</span>
-            <h2 className="section-title reveal reveal-delay-1">
-              Trusted by Discerning
-              <br />
-              Collectors Worldwide
-            </h2>
-            <div
-              className="gold-divider reveal reveal-delay-2"
-              style={{ margin: "var(--spacing-xl) auto" }}
-            ></div>
+            <Reveal>
+              <span className="section-label">Collector&apos;s Voices</span>
+            </Reveal>
+            <Reveal delay={0.15}>
+              <h2 className="section-title">
+                Trusted by Discerning
+                <br />
+                Collectors Worldwide
+              </h2>
+            </Reveal>
+            <Reveal delay={0.25}>
+              <div
+                className="gold-divider"
+                style={{ margin: "var(--spacing-xl) auto" }}
+              ></div>
+            </Reveal>
           </div>
 
-          <div className="testimonials-grid">
-            <div className="testimonial-card reveal">
+          <StaggerReveal
+            className="testimonials-grid"
+            staggerDelay={0.15}
+            as="div"
+          >
+            <div className="testimonial-card">
               <div className="testimonial-quote">&quot;</div>
               <p className="testimonial-text">
                 Master Antique sourced a Victorian writing desk for my study that had
@@ -212,7 +255,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="testimonial-card reveal reveal-delay-1">
+            <div className="testimonial-card">
               <div className="testimonial-quote">&quot;</div>
               <p className="testimonial-text">
                 I have purchased from auction houses across Europe, but nowhere have I
@@ -234,7 +277,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="testimonial-card reveal reveal-delay-2">
+            <div className="testimonial-card">
               <div className="testimonial-quote">&quot;</div>
               <p className="testimonial-text">
                 The brass carriage clock I acquired has become the centrepiece of my
@@ -254,22 +297,24 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-          </div>
+          </StaggerReveal>
         </div>
       </section>
 
       <section className="scarcity-banner">
         <div className="container">
-          <p>
-            Each piece is <span>one of a kind</span> — once acquired, it may never return
-            to the market.
-          </p>
+          <Reveal>
+            <p>
+              Each piece is <span>one of a kind</span> — once acquired, it may never return
+              to the market.
+            </p>
+          </Reveal>
         </div>
       </section>
 
       <section className="newsletter">
         <div className="container">
-          <div className="reveal">
+          <Reveal>
             <span className="section-label">Private Viewings</span>
             <h2 className="section-title">Join the Collector&apos;s Circle</h2>
             <p className="section-subtitle">
@@ -277,7 +322,7 @@ export default function HomePage() {
               private viewings, and insights from our restoration studio.
             </p>
             <NewsletterForm />
-          </div>
+          </Reveal>
         </div>
       </section>
     </main>

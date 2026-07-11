@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import ContactForm from "@/components/ContactForm";
 import { SITE } from "@/lib/site";
+import { Reveal, StaggerReveal } from "@/components/animations";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -54,37 +55,49 @@ export default function ContactPage() {
     <main>
       <section className="page-header">
         <div className="container">
-          <span className="section-label reveal">Get in Touch</span>
-          <h1 className="section-title reveal reveal-delay-1">
-            Arrange a
-            <br />
-            Private Viewing
-          </h1>
-          <div
-            className="gold-divider reveal reveal-delay-2"
-            style={{ margin: "var(--spacing-lg) auto" }}
-          ></div>
-          <p className="section-subtitle reveal reveal-delay-3">
-            We welcome collectors and enthusiasts by appointment. Our curators will be
-            delighted to assist you.
-          </p>
+          <Reveal>
+            <span className="section-label">Get in Touch</span>
+          </Reveal>
+          <Reveal delay={0.15}>
+            <h1 className="section-title">
+              Arrange a
+              <br />
+              Private Viewing
+            </h1>
+          </Reveal>
+          <Reveal delay={0.25}>
+            <div
+              className="gold-divider"
+              style={{ margin: "var(--spacing-lg) auto" }}
+            ></div>
+          </Reveal>
+          <Reveal delay={0.3}>
+            <p className="section-subtitle">
+              We welcome collectors and enthusiasts by appointment. Our curators will be
+              delighted to assist you.
+            </p>
+          </Reveal>
         </div>
       </section>
 
       <section className="contact-section">
         <div className="container">
           <div className="contact-grid">
-            <div className="reveal">
+            <Reveal>
               <div className="contact-form-wrap">
                 <ContactForm />
               </div>
-            </div>
+            </Reveal>
 
-            <div className="contact-info-list">
-              {CONTACT_CARDS.map((c, i) => (
+            <StaggerReveal
+              className="contact-info-list"
+              staggerDelay={0.1}
+              as="div"
+            >
+              {CONTACT_CARDS.map((c) => (
                 <div
                   key={c.title}
-                  className={`contact-info-card reveal${i === 0 ? "" : ` reveal-delay-${Math.min(i, 3)}`}`}
+                  className="contact-info-card"
                 >
                   <div className="contact-info-icon">
                     <i className={c.icon}></i>
@@ -109,17 +122,19 @@ export default function ContactPage() {
                   </div>
                 </div>
               ))}
-            </div>
+            </StaggerReveal>
           </div>
         </div>
       </section>
 
       <section className="scarcity-banner">
         <div className="container">
-          <p>
-            <span>Appointments recommended.</span> We dedicate our full attention to each
-            visitor to ensure a meaningful experience.
-          </p>
+          <Reveal>
+            <p>
+              <span>Appointments recommended.</span> We dedicate our full attention to each
+              visitor to ensure a meaningful experience.
+            </p>
+          </Reveal>
         </div>
       </section>
     </main>

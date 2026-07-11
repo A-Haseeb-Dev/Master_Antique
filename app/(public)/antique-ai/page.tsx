@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import AntiqueChat from "@/components/AntiqueChat";
+import { Reveal } from "@/components/animations";
 
 export const metadata: Metadata = {
   title: "Antique AI",
@@ -22,20 +23,28 @@ export default function AntiqueAiPage() {
     <main>
       <section className="page-header">
         <div className="container">
-          <span className="section-label reveal">Antique AI</span>
-          <h1 className="section-title reveal reveal-delay-1">
-            Ask the
-            <br />
-            Curator
-          </h1>
-          <div
-            className="gold-divider reveal reveal-delay-2"
-            style={{ margin: "var(--spacing-lg) auto" }}
-          ></div>
-          <p className="section-subtitle reveal reveal-delay-3">
-            Powered by our knowledge base of 130+ years of antique expertise. Ask about
-            periods, pieces, care, authentication, or restoration.
-          </p>
+          <Reveal>
+            <span className="section-label">Antique AI</span>
+          </Reveal>
+          <Reveal delay={0.15}>
+            <h1 className="section-title">
+              Ask the
+              <br />
+              Curator
+            </h1>
+          </Reveal>
+          <Reveal delay={0.25}>
+            <div
+              className="gold-divider"
+              style={{ margin: "var(--spacing-lg) auto" }}
+            ></div>
+          </Reveal>
+          <Reveal delay={0.3}>
+            <p className="section-subtitle">
+              Powered by our knowledge base of 130+ years of antique expertise. Ask about
+              periods, pieces, care, authentication, or restoration.
+            </p>
+          </Reveal>
         </div>
       </section>
 
@@ -49,10 +58,12 @@ export default function AntiqueAiPage() {
 
       <section className="scarcity-banner">
         <div className="container">
-          <p>
-            Every answer is grounded in our <span>curated knowledge base</span> of
-            authenticated antiques.
-          </p>
+          <Reveal>
+            <p>
+              Every answer is grounded in our <span>curated knowledge base</span> of
+              authenticated antiques.
+            </p>
+          </Reveal>
         </div>
       </section>
     </main>

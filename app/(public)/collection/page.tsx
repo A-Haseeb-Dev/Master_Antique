@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import CollectionGrid from "@/components/CollectionGrid";
+import { Reveal } from "@/components/animations";
 
 export const metadata: Metadata = {
   title: "The Collection",
@@ -22,20 +23,28 @@ export default function CollectionPage() {
     <main>
       <section className="page-header">
         <div className="container">
-          <span className="section-label reveal">The Collection</span>
-          <h1 className="section-title reveal reveal-delay-1">
-            Curated
-            <br />
-            Masterpieces
-          </h1>
-          <div
-            className="gold-divider reveal reveal-delay-2"
-            style={{ margin: "var(--spacing-lg) auto" }}
-          ></div>
-          <p className="section-subtitle reveal reveal-delay-3">
-            Every piece authenticated, restored, and presented with full provenance. Each
-            is one of a kind — once acquired, it may never return.
-          </p>
+          <Reveal>
+            <span className="section-label">The Collection</span>
+          </Reveal>
+          <Reveal delay={0.15}>
+            <h1 className="section-title">
+              Curated
+              <br />
+              Masterpieces
+            </h1>
+          </Reveal>
+          <Reveal delay={0.25}>
+            <div
+              className="gold-divider"
+              style={{ margin: "var(--spacing-lg) auto" }}
+            ></div>
+          </Reveal>
+          <Reveal delay={0.3}>
+            <p className="section-subtitle">
+              Every piece authenticated, restored, and presented with full provenance. Each
+              is one of a kind — once acquired, it may never return.
+            </p>
+          </Reveal>
         </div>
       </section>
 
@@ -47,10 +56,12 @@ export default function CollectionPage() {
 
       <section className="scarcity-banner">
         <div className="container">
-          <p>
-            All pieces come with a <span>Certificate of Authenticity</span> and detailed
-            provenance documentation.
-          </p>
+          <Reveal>
+            <p>
+              All pieces come with a <span>Certificate of Authenticity</span> and detailed
+              provenance documentation.
+            </p>
+          </Reveal>
         </div>
       </section>
     </main>
